@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3CA74"
+    tools:context=".EditFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_total_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        tools:text="4800"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioButton
+        android:id="@+id/radio_one_hundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_total_amount" />
+
+    <RadioButton
+        android:id="@+id/radio_five_hundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/radio_one_hundred"
+        app:layout_constraintTop_toBottomOf="@id/radio_one_hundred" />
+
+    <RadioButton
+        android:id="@+id/radio_thousand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/radio_five_hundred"
+        app:layout_constraintTop_toBottomOf="@id/radio_five_hundred"
+        />
+
+
+    <ImageView
+        android:id="@+id/image_one_hundred"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/sto_rubley_300"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toEndOf="@id/radio_one_hundred"
+        app:layout_constraintTop_toTopOf="@id/radio_one_hundred"
+        app:layout_constraintBottom_toBottomOf="@id/radio_one_hundred"/>
+
+    <ImageView
+        android:id="@+id/image_five_hundred"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/pyatsot_rubley_300"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toEndOf="@id/radio_five_hundred"
+        app:layout_constraintTop_toTopOf="@id/radio_five_hundred"
+        app:layout_constraintBottom_toBottomOf="@id/radio_five_hundred"/>
+
+    <ImageView
+        android:id="@+id/image_thousand"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/tyisyacha_rubley_300"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toEndOf="@id/radio_thousand"
+        app:layout_constraintTop_toTopOf="@id/radio_thousand"
+        app:layout_constraintBottom_toBottomOf="@id/radio_thousand"/>
+
+    <TextView
+        android:id="@+id/tv_one_hundred_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="x4"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="@id/radio_one_hundred"
+        app:layout_constraintBottom_toBottomOf="@id/radio_one_hundred"
+        app:layout_constraintStart_toEndOf="@id/image_one_hundred"
+        />
+
+    <TextView
+        android:id="@+id/tv_one_hundred_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="400"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="@id/radio_one_hundred"
+        app:layout_constraintBottom_toBottomOf="@id/radio_one_hundred"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_five_hundred_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="x2"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="@id/radio_five_hundred"
+        app:layout_constraintBottom_toBottomOf="@id/radio_five_hundred"
+        app:layout_constraintStart_toEndOf="@id/image_five_hundred"
+        />
+
+    <TextView
+        android:id="@+id/tv_five_hundred_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1000"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="@id/radio_five_hundred"
+        app:layout_constraintBottom_toBottomOf="@id/radio_five_hundred"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_thousand_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="x3"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="@id/radio_thousand"
+        app:layout_constraintBottom_toBottomOf="@id/radio_thousand"
+        app:layout_constraintStart_toEndOf="@id/image_thousand"
+        />
+
+    <TextView
+        android:id="@+id/tv_thousand_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3000"
+        android:textSize="48sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="@id/radio_thousand"
+        app:layout_constraintBottom_toBottomOf="@id/radio_thousand"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4400"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_thousand_amount"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_amount_different"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="-400"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_total_amount"
+        app:layout_constraintBottom_toBottomOf="@id/tv_total_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_total_amount"
+        />
+
+    <SeekBar
+        android:id="@+id/seek_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_total_amount"/>
+
+    <Button
+        android:id="@+id/button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="6dp"
+        android:text="@string/ok"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/seek_count"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

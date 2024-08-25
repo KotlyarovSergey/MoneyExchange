@@ -13,7 +13,7 @@
         android:scaleType="fitCenter"
         android:layout_margin="4dp"
         android:adjustViewBounds="true"
-        android:alpha="0.7f"
+        android:alpha="0.7"
         android:src="@drawable/sto_rubley_300"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:scaleType="fitCenter"
         android:layout_margin="4dp"
         android:adjustViewBounds="true"
-        android:alpha="0.7f"
+        android:alpha="0.7"
         android:src="@drawable/pyatsot_rubley_300"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/image_one_hundred"
@@ -108,15 +108,14 @@
         android:id="@+id/image_thousand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
         android:layout_margin="4dp"
         android:adjustViewBounds="true"
-        android:alpha="0.7f"
+        android:alpha="0.7"
+        android:scaleType="fitCenter"
         android:src="@drawable/tyisyacha_rubley_300"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image_five_hundred"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toEndOf="@id/image_five_hundred"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_thousand_count"
